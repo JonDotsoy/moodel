@@ -1,0 +1,29 @@
+{
+  "name": "moodel",
+  "version": "1.0.0-alpha",
+  "description": "An easy way to create models for a modern javascript.",
+  "main": "moodel.js",
+  "scripts": {
+    "test": "mocha --recursive ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonDotsoy/moodel.git"
+  },
+  "keywords": [
+    "model"
+  ],
+  "author": "Jonathan Delgado Zamorano <hi@jon.soy> (https://jon.soy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonDotsoy/moodel/issues"
+  },
+  "homepage": "https://github.com/JonDotsoy/moodel#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.6.0",
+    "gulp": "^3.9.1",
+    "mocha": "^5.2.0",
+    "webpack": "^4.20.2"
+  }
+}
