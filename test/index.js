@@ -4,38 +4,23 @@ const { expect } = require('chai');
 const { Moodel, types } = require('../lib/moodel');
 const util = require('util');
 
-describe('Types', () => {
-  it('Sample Type', () => {
-    const typedef = types.Date.required;
-  
-    const e = types.Any.toJSON();
+/**
+ * @typedef {import('../src/TypeDef')} TypeDef
+ */
 
-    types(1).def
+describe('Types Definition', () => {
+  it('should return a definition object', () => {
+    const typedef = types().def;
+    const symbolsFromTypeDef = Object.getOwnPropertySymbols(typedef).map(symbol => symbol.toString());
 
-    console.log(
-      util.inspect(
-        types(String)
-          .required
-          .enum(1, 2, 3)
-          .default(3)
-          .def,
-        {
-          colors: true,
-          depth: null,
-        }
-      )
-    )
+    expect(typedef).to.be.a('object');
+    expect(symbolsFromTypeDef).contain('Symbol(Symbol.typeOptions)');
+  });
 
-    // expect(typedef).to.be.a('object');¡
+  it('should contain a type options or type description', () => {
+    const typedef = types().def;
+
+    
   });
 });
 
-describe('Simplre object', () => {
-  it('make a simple model', () => {
-    const Model = Moodel({
-      name: 'John',
-    });
-
-    expect(Model).property('protitype').property('name').eq('John');
-  });
-});

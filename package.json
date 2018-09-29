@@ -20,10 +20,16 @@
   },
   "homepage": "https://github.com/JonDotsoy/moodel#readme",
   "devDependencies": {
-    "babel-core": "^6.21.0",
+    "babel-cli": "^7.0.0-beta.3",
+    "babel-core": "^7.0.0-beta.3",
     "babel-loader": "^7.1.4",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-typescript": "^7.0.0-beta.3",
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "dts-gen": "^0.5.7"
   }
 }
