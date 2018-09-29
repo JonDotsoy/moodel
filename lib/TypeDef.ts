@@ -52,7 +52,6 @@ export class TypeDef<T> {
     this.typeOptions.max = maxVal;
     return this;
   }
-  /** @returns {TypeOptions<T>} */
   toJSON() {
     return this.typeOptions;
   }

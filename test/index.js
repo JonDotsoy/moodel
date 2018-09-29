@@ -1,12 +1,8 @@
 
 /* global describe,it */
 const { expect } = require('chai');
-const { Moodel, types } = require('../lib/moodel');
+const {  sMoodel, types } = require('../lib/moodel');
 const util = require('util');
-
-/**
- * @typedef {import('../src/TypeDef')} TypeDef
- */
 
 describe('Types Definition', () => {
   it('should return a definition object', () => {
