@@ -15,9 +15,11 @@
           "--timeout",
           "999999",
           "--colors",
-          "${workspaceFolder}/test"
+          "--require",
+          "ts-node/register",
+          "${workspaceFolder}/test/**/*.spec.js"
         ],
-        "internalConsoleOptions": "openOnSessionStart"
+        "console": "integratedTerminal"
       }
     ]
 }

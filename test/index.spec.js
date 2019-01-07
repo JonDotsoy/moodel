@@ -1,7 +1,7 @@
 
 /* global describe,it */
 const { expect } = require('chai');
-const {  sMoodel, types } = require('../lib/moodel');
+const { Moodel, types } = require('../lib/moodel');
 const util = require('util');
 
 describe('Types Definition', () => {
@@ -14,9 +14,7 @@ describe('Types Definition', () => {
   });
 
   it('should contain a type options or type description', () => {
-    const typedef = types().def;
-
-    
+    const typedef = types.String.def;
   });
 });
 
