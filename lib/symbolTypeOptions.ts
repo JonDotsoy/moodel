@@ -1,3 +1,2 @@
 
-// @ts-ignore
-export const symbolTypeOptions:Symbol = Symbol('Symbol.typeOptions');
+export const symbolTypeOptions:unique symbol = Symbol('Symbol.typeOptions');

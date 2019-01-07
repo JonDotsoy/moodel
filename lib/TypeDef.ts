@@ -2,58 +2,58 @@ import { TypeOptions } from './TypeOptions';
 import { symbolTypeOptions } from './symbolTypeOptions';
 
 export class TypeDef<T> {
-  public typeOptions: TypeOptions<T|any>
+  public [symbolTypeOptions]: TypeOptions<T|any>
 
   constructor(initialDef?:{type:T}) {
-    this.typeOptions = new TypeOptions(initialDef || {type:undefined});
+    this[symbolTypeOptions] = new TypeOptions(initialDef || {type:undefined});
   }
   get trim() {
-    this.typeOptions.trim = true;
+    this[symbolTypeOptions].trim = true;
     return this;
   }
   get readonly() {
-    this.typeOptions.readonly = true;
+    this[symbolTypeOptions].readonly = true;
     return this;
   }
   get uppercase() {
-    this.typeOptions.uppercase = true;
+    this[symbolTypeOptions].uppercase = true;
     return this;
   }
   get lowercase() {
-    this.typeOptions.lowercase = true;
+    this[symbolTypeOptions].lowercase = true;
     return this;
   }
   get required() {
-    this.typeOptions.required = true;
+    this[symbolTypeOptions].required = true;
     return this;
   }
   enum(...vals:T[]) {
     // @ts-ignore
-    this.typeOptions.enum = [].concat(...vals);
+    this[symbolTypeOptions].enum = [].concat(...vals);
     return this;
   }
   default(defaultVal:T|(()=>T)) {
-    this.typeOptions.default = defaultVal;
+    this[symbolTypeOptions].default = defaultVal;
     return this;
   }
   setter(setter:(valueSeted:T|undefined)=>any) {
-    this.typeOptions.setter = setter;
+    this[symbolTypeOptions].setter = setter;
     return this;
   }
   getter(getter:(val:any)=>T) {
-    this.typeOptions.getter = getter;
+    this[symbolTypeOptions].getter = getter;
     return this;
   }
   min(minVal:number) {
-    this.typeOptions.min = minVal;
+    this[symbolTypeOptions].min = minVal;
     return this;
   }
   max(maxVal:number) {
-    this.typeOptions.max = maxVal;
+    this[symbolTypeOptions].max = maxVal;
     return this;
   }
   toJSON() {
-    return this.typeOptions;
+    return this[symbolTypeOptions];
   }
   // @ts-ignore
   get def():InstanceType<T> { return this; }
